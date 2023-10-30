@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  default  -->
+    <script src="google/resources/default/jquery-3.7.1.min.js"></script>
+    <link href="google/resources/default/select2/select2.min.css" rel="stylesheet" />
+    <script src="google/resources/default/select2/select2.min.js"></script>
+    <script src="google/resources/default/select2/fa.js"></script>
+    <link href="google/resources/default/css/select2-custom.css" rel="stylesheet" />
+    <!--  zali-orange theme  -->
+    <link href="google/style.css" rel="stylesheet" />
+    <title>search</title>
+</head>
+
+<body>
+    <br/>
+    <br/>
+
+    <div style="width: 100%;">
+        <select id="js-data-ajax" style="width: 100%;" class="js-example-placeholder-single form-control" name="query" autofocus required>
+<!--        <option value='{{query}}' selected>{{query}}</option>-->
+        </select>
+        <!--
+        <select id="drop_down">
+            <option value="zhaket" selected>ژاکت</option>
+            <option value="aparat">آپارات</option>
+            <option value="rtl-themes" >راست چین</option>
+            <option value="zali" disabled>زالی</option>
+        </select>
+        -->
+       <!-- <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </button>
+            <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+                <li class="dropdown-item"><a href="#">Some action</a></li>
+                <li class="dropdown-item"><a href="#">Some other action</a></li>
+            </ul>
+        </div> -->
+    </div>
+
+    <script>
+        var data = [
+            {
+                id: 0,
+                text: 'Yoast SEO plugin',
+                image: 'https://ircdn.zhaket.com/resources/5dc9a263eaec3700091ff655/6481b9961071c1f90b062484.png',
+                class: 'lexical_suggest',
+            },
+            {
+                id: 1,
+                text: 'WoodMart - WordPress WooCommerce Theme',
+                image: 'https://ircdn.zhaket.com/resources/5dc9b4a4eaec370009200c45/64537b43b7a8d81fbd09a9f2.png',
+                class: 'lexical_suggest'
+            },
+            {
+                id: 2,
+                text: 'Wordpress Theme Sigma Plus',
+                class: 'lexical_suggest',
+            },
+            {
+                id: 3,
+                text: 'Irankala store Theme',
+                image: 'https://ircdn.zhaket.com/resources/5dc9a18beaec3700091ff53b/64802bdcc626792b86097be8.png',
+                class: 'conceptual_suggest',
+            },
+            {
+                id: 4,
+                text: 'Studiare | Sales assistant professor format training course ',
+                class: 'conceptual_suggest',
+            },
+            {
+                id: 5,
+                text: 'Digits | sign in and sing up plugin',
+                class: 'conceptual_suggest',
+            },
+
+
+        ];
+        function formatSuggestion (item) {
+          if (!item.image) {
+            var glassUrl = 'google/resources/images/null.png';
+            var $item = $(
+            '<span class="content_result ' + item.class +'"><img src="' + glassUrl + '" class="avatar_result" /> ' + item.text + '</span>'
+            );
+            return $item;
+          }
+          // var baseUrl = "/user/pages/images/flags";
+          // var $item = $(
+          //   '<span><img src="' + baseUrl + '/' + item.element.value.toLowerCase() + '.png" class="img-flag" /> ' + item.text + '</span>'
+          // );
+
+          var $item = $(
+            '<div> <span class="content_result ' + item.class +'"><img src="' + item.image + '" class="avatar_result" /> <span class="text_image">' + item.text + '</span></span></div>'
+          );
+          return $item;
+        };
+
+        $(document).ready(function() {
+            $('#js-data-ajax').select2({
+                theme: "google",
+                dir: "ltr",
+                language: 'en',
+                placeholder: "Search in seventy common languages of the world ...",
+
+                templateResult: formatSuggestion,
+                data: data,
+            });
+        });
+
+    </script>
+    <script src="google/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  default  -->
+    <script src="google/resources/default/jquery-3.7.1.min.js"></script>
+    <link href="google/resources/default/select2/select2.min.css" rel="stylesheet" />
+    <script src="google/resources/default/select2/select2.min.js"></script>
+    <script src="google/resources/default/select2/fa.js"></script>
+    <link href="google/resources/default/css/select2-custom.css" rel="stylesheet" />
+    <!--  zali-orange theme  -->
+    <link href="google/style.css" rel="stylesheet" />
+    <title>search</title>
+</head>
+
+<body>
+    <br/>
+    <br/>
+
+    <div>
+        <select id="js-data-ajax" style="width: 100%;" class="js-example-placeholder-single form-control" name="query" autofocus required>
+<!--        <option value='{{query}}' selected>{{query}}</option>-->
+        </select>
+    </div>
+    
+    <script>
+        var data = [
+            {
+                id: 0,
+                text: 'افزونه سئو یوآست پرمیوم | پلاگین Yoast SEO Premium',
+                image: 'https://ircdn.zhaket.com/resources/5dc9a263eaec3700091ff655/6481b9961071c1f90b062484.png',
+                class: 'lexical_suggest',
+            },
+            {
+                id: 1,
+                text: 'قالب فروشگاهی وودمارت | قالب Woodmart',
+                image: 'https://ircdn.zhaket.com/resources/5dc9b4a4eaec370009200c45/64537b43b7a8d81fbd09a9f2.png',
+                class: 'lexical_suggest'
+            },
+            {
+                id: 2,
+                text: 'قالب وردپرس حرفه ای فروشگاهی سیگما پلاس | Sigma Plus',
+                class: 'lexical_suggest',
+            },
+            {
+                id: 3,
+                text: 'قالب فروشگاهی ایران کالا | قالب Irankala',
+                image: 'https://ircdn.zhaket.com/resources/5dc9a18beaec3700091ff53b/64802bdcc626792b86097be8.png',
+                class: 'conceptual_suggest',
+            },
+            {
+                id: 4,
+                text: 'قالب استادیار فروش دوره آموزشی | قالب Studiare',
+                class: 'conceptual_suggest',
+            },
+            {
+                id: 5,
+                text: 'افزونه ثبت نام و ورود با موبایل دیجیتس | پلاگین Digits',
+                class: 'conceptual_suggest',
+            },
+
+
+        ];
+        function formatSuggestion (item) {
+          if (!item.image) {
+            var glassUrl = 'google/resources/images/null.png';
+            var $item = $(
+            '<span class="content_result ' + item.class +'"><img src="' + glassUrl + '" class="avatar_result" /> ' + item.text + '</span>'
+            );
+            return $item;
+          }
+          // var baseUrl = "/user/pages/images/flags";
+          // var $item = $(
+          //   '<span><img src="' + baseUrl + '/' + item.element.value.toLowerCase() + '.png" class="img-flag" /> ' + item.text + '</span>'
+          // );
+
+          var $item = $(
+            '<div> <span class="content_result ' + item.class +'"><img src="' + item.image + '" class="avatar_result" /> <span class="text_image">' + item.text + '</span></span></div>'
+          );
+          return $item;
+        };
+
+        $(document).ready(function() {
+            $('#js-data-ajax').select2({
+                theme: "google",
+                dir: "rtl",
+                language: 'fa',
+                placeholder: 'جستجو به هفتاد زبان رایج دنیا ...',
+                //placeholder: '<a href="https://www.sharifsearch.ir" target="_blank"><img src="zal-orange/resources/images/sharif_logo.svg" style="height:20px; opacity:50%; padding-left: 5px;"/></a> جستجو به هفتاد زبان رایج دنیا ...',
+                //escapeMarkup: function(markup){ return markup; },
+                //allowClear: true,
+                // tags: true,
+
+                templateResult: formatSuggestion,
+                data: data,
+            });
+        });
+
+    </script>
+    <script src="google/script.js"></script>
+</body>
+</html>

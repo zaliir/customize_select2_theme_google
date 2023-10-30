@@ -1,0 +1,15 @@
+# Python
+*.pyc
+*~
+__pycache__
+
+# Env
+.env
+myvenv/
+venv/
+
+#git
+.idea
+
+# windows thumbnail cache
+Thumbs.db

@@ -1,0 +1,25 @@
+@font-face {
+  font-family: Pinar;
+  src: url('../fonts/Pinar-FD-Regular.woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Pinar_Bold;
+  src: url('../fonts/Pinar-FD-Bold.woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Pinar_Light;
+  src: url("../fonts/Pinar-FD-Light.woff2");
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* placeholder & message font */
+.select2-dropdown .select2-results__options .select2-results__option.select2-results__message,.select2-search__field, .container, .tooltip, .select2-results__option, .select2-selection__rendered{
+    font-family: Pinar;
+}

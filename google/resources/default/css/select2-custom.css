@@ -1,0 +1,29 @@
+@import "fonts.css";
+/* Note: Remove the above line and use fonts.css class (placeholder & message font) separately in the plugin */
+
+/* placeholder & message style */
+.select2-dropdown .select2-results__options .select2-results__option.select2-results__message,.select2-search__field, .container, .tooltip, .select2-results__option, .select2-selection__rendered{
+    color: #6c757d;
+    font-size: 14px;
+    /* font-family: Pinar; */
+}
+
+/* select2 lexical/conceptual colors */
+.lexical_suggest {color: #343a40;}
+.conceptual_suggest {color: #1b7098;}
+
+/* select2 placeholder img */
+img { vertical-align: baseline;}
+html[dir="rtl"] .select2-selection__placeholder img{
+    height:20px;
+    opacity:50%;
+    padding-left: 5px;
+    margin-bottom:-5px;
+}
+html[dir="ltr"] .select2-selection__placeholder img{
+    height:20px;
+    opacity:50%;
+    padding-right: 5px;
+    margin-bottom:-5px;
+}
+
