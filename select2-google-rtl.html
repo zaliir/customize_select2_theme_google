@@ -62,23 +62,25 @@
 
 
         ];
-        function formatSuggestion (item) {
-          if (!item.image) {
-            var glassUrl = 'google/resources/images/null.png';
-            var $item = $(
-            '<span class="content_result ' + item.class +'"><img src="' + glassUrl + '" class="avatar_result" /> ' + item.text + '</span>'
-            );
-            return $item;
-          }
-          // var baseUrl = "/user/pages/images/flags";
-          // var $item = $(
-          //   '<span><img src="' + baseUrl + '/' + item.element.value.toLowerCase() + '.png" class="img-flag" /> ' + item.text + '</span>'
-          // );
 
-          var $item = $(
-            '<div> <span class="content_result ' + item.class +'"><img src="' + item.image + '" class="avatar_result" /> <span class="text_image">' + item.text + '</span></span></div>'
-          );
-          return $item;
+        const root = 'google/';
+        function formatSuggestion (item) {
+          if (!item.id) {
+            return item.text;
+          }
+          else if (!item.image) {
+            const glassUrl = root + 'resources/images/null.png';
+            const res = $(
+            '<span class="content_result no_image ' + item.class +'"><img src="' + glassUrl + '" class="avatar_null" /> ' + item.text + '</span>'
+            );
+            return res;
+          }
+          else {
+              const res = $(
+                '<div> <span class="content_result ' + item.class +'"><img src="' + item.image + '" class="avatar_result" /> <span class="text_image">' + item.text + '</span></span></div>'
+              );
+              return res;
+          }
         };
 
         $(document).ready(function() {

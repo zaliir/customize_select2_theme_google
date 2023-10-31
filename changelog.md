@@ -12,6 +12,7 @@
 
 * 🎈 add logo google
 * 🎈 hover searchbox
+* 🎈 add code .avatar_null for size icon in null and rtl
 
 ## Changed
 
@@ -25,6 +26,11 @@
 * 🔷 change color text box result
 * 🔷 change border-radius hover selector result
 * 🔷 change line height text searchbox
+* 🔷 change backgrand hover result
+* 🔷 change border radius hover result
+* 🔷 [select2-google*.html] formatSuggestion updated.
+* 🔷 rotate image null in result
+* 🔷 null.png and .avatar_null style updated.
 
 ## Fixed
 

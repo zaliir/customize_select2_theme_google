@@ -302,6 +302,7 @@ html[dir="rtl"] .select2-container--google .select2-results > .select2-results__
   background-color: #fea00029; /*color orangr*/
   background-color: #e7e7e7; /*color gray*/
   background-color: #0063ff1a; /*color blue*/
+  background-color: #f8f9fa; /*color gray_google*/
   /*color: white;*/ }
 
 .select2-container--google .select2-results__group {
@@ -315,8 +316,8 @@ html[dir="rtl"] .select2-container--google .select2-results > .select2-results__
   /*padding: 6px 16px !important;*/
   user-select: none;
   -webkit-user-select: none;
-  border-radius: 1.5em;
-  padding: 10px !important;
+  border-radius: 3px;
+  padding: 4px !important;
 }
 
 /*edit boder clor and shado*/
@@ -335,7 +336,7 @@ html[dir="rtl"] .select2-container--google .select2-results > .select2-results__
   /*float: right;*/
   padding-right: 14px;
   /*padding-top: 13px;*/
-  padding: 10   px;
+  padding-left: 4px;
 }
 html[dir='rtl'] .avatar_result{
     padding-left: 14px !important;
@@ -403,6 +404,7 @@ html[dir='rtl'] .avatar_result{
 
 .select2-container--google ~ .select2-search__field, .select2-selection__rendered, .text_image, .select2-results__option {
   font-size: 14px !important;
+  line-height: 19px;
 }
 
 .select2-container--google.select2-container{
@@ -528,3 +530,14 @@ html[dir="rtl"] .select2-container--google .select2-selection--single .select2-s
   outline:none;
 }
 */
+
+.content_result.no_image .avatar_null {
+    padding: 3.5px 24px 3.5px 11px;
+    width: 15px !important;
+    opacity: .4;
+}
+html[dir="rtl"] .content_result.no_image .avatar_null {
+    padding: 3.5px 21px 3.5px 10px;
+    opacity: .4;
+    transform: scaleX(-1);
+}
