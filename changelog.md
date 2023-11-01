@@ -13,6 +13,7 @@
 * 🎈 add logo google
 * 🎈 hover searchbox
 * 🎈 add code .avatar_null for size icon in null and rtl
+* 🎈 [style.css] dropdown result message (not found) padding updated.
 
 ## Changed
 
@@ -31,6 +32,8 @@
 * 🔷 [select2-google*.html] formatSuggestion updated.
 * 🔷 rotate image null in result
 * 🔷 null.png and .avatar_null style updated.
+* 🔷 change padding "no result" in result
+* 🔷 change box-sizing in icon null
 
 ## Fixed
 

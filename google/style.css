@@ -261,7 +261,6 @@ html[dir="rtl"] .select2-container--google .select2-search--dropdown .select2-se
 /*change max-height for show 5 contents*/
 .select2-container--google .select2-results > .select2-results__options {
   max-height: 530px;
-  overflow-y: auto;
   direction: ltr;}
 /*change direction to rtl*/
 html[dir="rtl"] .select2-container--google .select2-results > .select2-results__options {
@@ -318,6 +317,11 @@ html[dir="rtl"] .select2-container--google .select2-results > .select2-results__
   -webkit-user-select: none;
   border-radius: 3px;
   padding: 4px !important;
+}
+
+/* dropdown result message (not found) */
+.select2-container--google .select2-results__message {
+    padding: 10px 20px !important;
 }
 
 /*edit boder clor and shado*/
@@ -535,9 +539,14 @@ html[dir="rtl"] .select2-container--google .select2-selection--single .select2-s
     padding: 3.5px 24px 3.5px 11px;
     width: 15px !important;
     opacity: .4;
+    box-sizing: content-box;
 }
 html[dir="rtl"] .content_result.no_image .avatar_null {
     padding: 3.5px 21px 3.5px 10px;
-    opacity: .4;
     transform: scaleX(-1);
+    box-sizing: content-box;
+}
+
+.select2-container--google .select2-search--dropdown{
+    padding: 0 15px;
 }
