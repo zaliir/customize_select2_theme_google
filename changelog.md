@@ -14,6 +14,10 @@
 * 🎈 hover searchbox
 * 🎈 add code .avatar_null for size icon in null and rtl
 * 🎈 [style.css] dropdown result message (not found) padding updated.
+* 🎈 overflow to result content
+* 🎈 [.select2-container--google .select2-dropdown--above] shadow and border-radius to searrch-box in dropdown--above
+* 🎈 [.select2-container--google.select2-container--above .select2-selection] border-radius in dropdown--above
+* 🎈 border-radius for tumbnail_image
 
 ## Changed
 
@@ -34,6 +38,13 @@
 * 🔷 null.png and .avatar_null style updated.
 * 🔷 change padding "no result" in result
 * 🔷 change box-sizing in icon null
+* 🔷 [.select2-container--google .select2-search--dropdown .select2-search__field] change padding-left to important 
+* 🔷 change container [height]
+* 🔷 .sharif_form: max-width (50em) added. (buttons included)
+* 🔷 [select2-google*.html] formatSuggestion(): `text_image` class removed.
+* 🔷 [style.css] .avatar_result class: padding changed to margin to resolve small thumbnails issue.
+* 🔷 [style.css] .select2-results__options: max-height reduced from 530, @media 410 to 400, @media 300
+* 🔷 change margin and padding avatar
 
 ## Fixed
 

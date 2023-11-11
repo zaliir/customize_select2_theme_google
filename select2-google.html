@@ -88,13 +88,13 @@
           else if (!item.image) {
             const glassUrl = root + 'resources/images/null.png';
             const res = $(
-            '<span class="content_result no_image ' + item.class +'"><img src="' + glassUrl + '" class="avatar_null" /> ' + item.text + '</span>'
+            '<span class="content_result no_image ' + item.class +'"><img src="' + glassUrl + '" class="avatar_null" />' + item.text + '</span>'
             );
             return res;
           }
           else {
               const res = $(
-                '<div> <span class="content_result ' + item.class +'"><img src="' + item.image + '" class="avatar_result" /> <span class="text_image">' + item.text + '</span></span></div>'
+                '<span class="content_result ' + item.class +'"><img src="' + item.image + '" class="avatar_result" />' + item.text + '</span>'
               );
               return res;
           }
